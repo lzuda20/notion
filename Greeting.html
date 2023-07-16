@@ -42,6 +42,11 @@ body{
     var dayOfWeek = weekday[today.getDay()];
     var date = dayOfWeek+" " + (today.getMonth()+1) + "/" + today.getDate() +'/'+today.getFullYear()  ;
 
+// Bold the dayOfWeek and date
+    dayOfWeek = "<b>" + dayOfWeek + "</b>";
+    date = "<b>" + date + "</b>";
+
+    
     var greet;
 
     if (hrs < 12)
@@ -52,6 +57,6 @@ body{
         greet = 'Good Evening,  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+="Jim"+`<div id="date"> It's ${date}</div>`;
+        greet+="Jim"+`<div id="date"> It's ${dayOfWeek} ${date}</div>`;
 </script> 
 </html>
